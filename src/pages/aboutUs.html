@@ -1,66 +1,791 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <title>Web-fullStack</title>
-    <link rel="stylesheet" href="../output.css">
-</head>
-<body>
-    
-
-<nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-      </a>
-      <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+    <link rel="stylesheet" href="../output.css" />
+    <style>
+      * {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="bg-white fixed z-50 w-full border-gray-200 dark:bg-gray-900 dark:border-gray-700"
+    >
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img
+            src="https://flowbite.com/docs/images/logo.svg"
+            class="h-8"
+            alt="Flowbite Logo"
+          />
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+            >Flowbite</span
+          >
+        </a>
+        <button
+          data-collapse-toggle="navbar-dropdown"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-dropdown"
+          aria-expanded="false"
+        >
           <span class="sr-only">Open main menu</span>
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
           </svg>
-      </button>
-      <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-        <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-          <li>
-            <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
-          </li>
-          <li>
-              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Dropdown <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-    </svg></button>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+          <ul
+            class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <button
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="dropdownNavbar"
+                class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+              >
+                Dropdown
+                <svg
+                  class="w-2.5 h-2.5 ms-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
               <!-- Dropdown menu -->
-              <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
-                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                    </li>
-                  </ul>
-                  <div class="py-1">
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
-                  </div>
+              <div
+                id="dropdownNavbar"
+                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600"
+              >
+                <ul
+                  class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                  aria-labelledby="dropdownLargeButton"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Dashboard</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Settings</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Earnings</a
+                    >
+                  </li>
+                </ul>
+                <div class="py-1">
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    >Sign out</a
+                  >
+                </div>
               </div>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-          </li>
-        </ul>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  
-</body>
+    </nav>
+
+    <main
+      class="flex flex-col items-center justify-center gap-10 md:gap-20 mb-10 md:mb-20"
+    >
+      <!-- Hero Section for about us page -->
+      <section
+        class="relative overflow-hidden min-h-screen h-fit flex flex-col justify-center items-center bg-white mt-6 md:mt-0"
+      >
+        <div
+          class="relative w-full max-w-[80rem] mx-auto py-12 px-4 lg:px-0 mt-7 flex justify-center items-center h-full"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+              <div>
+                <span
+                  class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+                >
+                  About us
+                </span>
+              </div>
+              <h1
+                class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-[1.1]"
+              >
+                Empowering Your
+                <span class="text-blue-600"> Digital </span>World
+              </h1>
+              <p class="text-lg md:text-xl text-gray-600 max-w-2xl">
+                At TopCom, we’re more than a computer store — we’re your trusted
+                tech partner. We offer high-performance laptops, desktops, and
+                accessories backed by expert service and customer care. Discover
+                our story and see why thousands choose us.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                <a
+                  href="#company-history"
+                  size="lg"
+                  class="text-white transition-all duration-300 ease-in-out h-11 flex px-4 gap-2 justify-center items-center rounded-md bg-blue-600 hover:bg-blue-700"
+                >
+                  Explore Our Story
+                </a>
+              </div>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-4 pt-6">
+                <div class="flex items-center gap-2">
+                  <i class="h-5 w-5 fa-solid fa-truck-fast text-blue-600"></i>
+                  <span class="text-sm font-medium">Fast Shipping</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="h-5 w-5 fa-solid fa-briefcase text-blue-600"></i>
+                  <span class="text-sm font-medium">10K+ Customers</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i
+                    class="h-5 w-5 fa-solid fa-screwdriver-wrench text-blue-600"
+                  ></i>
+                  <span class="text-sm font-medium">Expert Support</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-xl"
+            >
+              <img
+                src="https://images.pexels.com/photos/8134109/pexels-photo-8134109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="a image of a computer"
+                fill
+                class="object-cover h-full hover:scale-105 transition-all duration-300 ease-in-out"
+                priority
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6"
+              >
+                <div class="text-white">
+                  <p class="font-semibold text-lg">Build for performance</p>
+                  <p class="text-sm opacity-90">Work, game and create</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Company history -->
+      <section
+        id="company-history"
+        class="w-full bg-gradient-to-br min-h-screen h-fit flex items-center from-blue-50 to-purple-50 mx-auto"
+      >
+        <div
+          class="w-full max-w-[80rem] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 py-8 px-4 lg:px-0"
+        >
+          <!-- Right Content Our Story -->
+          <div class="flex flex-col justify-center gap-5 order-1 md:order-2">
+            <h2
+              class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-900 bg-clip-text text-transparent"
+            >
+              Our Story
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl">
+              TopCom was born from a passion for technology and a vision to make
+              premium computers accessible to everyone. What started in a small
+              workspace is now a trusted brand serving thousands nationwide.
+            </p>
+
+            <div class="relative rounded-xl overflow-hidden shadow-xl">
+              <img
+                src="https://cdn.pixabay.com/photo/2024/04/05/05/17/business-8676529_1280.jpg"
+                alt="a image of a team working together"
+                fill
+                class="object-cover h-full hover:scale-105 transition-all duration-300 ease-in-out"
+                priority
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6"
+              >
+                <div class="text-white">
+                  <p class="font-semibold text-lg">Work as a team</p>
+                  <p class="text-sm opacity-90">
+                    Quality, Experience and Flexible
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                class="inline-flex items-center gap-x-2 bg-white px-4 py-2 rounded-full shadow-sm"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-purple-600"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="text-sm font-medium text-gray-700"
+                  >Established since 2014</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Left content -->
+          <div class="order-2 md:order-1">
+            <!-- Timeline -->
+            <div class="relative">
+              <!-- Vertical line -->
+              <div
+                class="absolute left-7 top-0 h-full w-0.5 bg-gradient-to-b from-blue-200 to-purple-200"
+              ></div>
+              <!-- Timeline items -->
+              <div class="space-y-2">
+                <!-- 2014 -->
+                <div class="flex gap-x-3 relative">
+                  <!-- Icon -->
+                  <div
+                    class="relative z-10 size-7 flex justify-center items-center"
+                  >
+                    <div
+                      class="size-4 rounded-full bg-white border-4 border-blue-500 shadow-md"
+                    ></div>
+                  </div>
+                  <!-- Content -->
+                  <div class="grow pt-0.5 pb-2">
+                    <div class="ps-2 mb-2">
+                      <h3
+                        class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-100 inline-block px-2 py-1 rounded-full"
+                      >
+                        2014
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 ml-2"
+                    >
+                      <h3
+                        class="flex gap-x-1.5 font-semibold text-gray-800 text-lg"
+                      >
+                        The Beginning
+                      </h3>
+                      <p class="mt-1 text-gray-600">
+                        Founded as a local computer shop focused on honest
+                        service and quality tech.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- 2016 -->
+                <div class="flex gap-x-3 relative">
+                  <!-- Icon -->
+                  <div
+                    class="relative z-10 size-7 flex justify-center items-center"
+                  >
+                    <div
+                      class="size-4 rounded-full bg-white border-4 border-purple-500 shadow-md"
+                    ></div>
+                  </div>
+                  <!-- Content -->
+                  <div class="grow pt-0.5 pb-2">
+                    <div class="ps-2 mb-2">
+                      <h3
+                        class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-100 inline-block px-2 py-1 rounded-full"
+                      >
+                        2016
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 ml-2"
+                    >
+                      <h3
+                        class="flex gap-x-1.5 font-semibold text-gray-800 text-lg"
+                      >
+                        Going Digital
+                      </h3>
+                      <p class="mt-1 text-gray-600">
+                        Launched our online store to reach customers across the
+                        country.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- 2018 -->
+                <div class="flex gap-x-3 relative">
+                  <!-- Icon -->
+                  <div
+                    class="relative z-10 size-7 flex justify-center items-center"
+                  >
+                    <div
+                      class="size-4 rounded-full bg-white border-4 border-blue-500 shadow-md"
+                    ></div>
+                  </div>
+                  <!-- Content -->
+                  <div class="grow pt-0.5 pb-2">
+                    <div class="ps-2 mb-2">
+                      <h3
+                        class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-100 inline-block px-2 py-1 rounded-full"
+                      >
+                        2018
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 ml-2"
+                    >
+                      <h3
+                        class="flex gap-x-1.5 font-semibold text-gray-800 text-lg"
+                      >
+                        Trusted by Thousands
+                      </h3>
+                      <p class="mt-1 text-gray-600">
+                        Surpassed 5,000 customers and introduced a wider range
+                        of accessories and peripherals.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- 2020 -->
+                <div class="flex gap-x-3 relative">
+                  <!-- Icon -->
+                  <div
+                    class="relative z-10 size-7 flex justify-center items-center"
+                  >
+                    <div
+                      class="size-4 rounded-full bg-white border-4 border-purple-500 shadow-md"
+                    ></div>
+                  </div>
+                  <!-- Content -->
+                  <div class="grow pt-0.5">
+                    <div class="ps-2 mb-2">
+                      <h3
+                        class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-100 inline-block px-2 py-1 rounded-full"
+                      >
+                        2020
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 ml-2"
+                    >
+                      <h3
+                        class="flex gap-x-1.5 font-semibold text-gray-800 text-lg"
+                      >
+                        Full-Service Tech Partner
+                      </h3>
+                      <p class="mt-1 text-gray-600">
+                        Became a go-to destination for personal and business
+                        tech solutions, with expert support and fast nationwide
+                        shipping.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="relative w-full flex flex-col items-center">
+        <div
+          class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-0"
+          aria-hidden="true"
+        >
+          <div
+            class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-blue-600 to-[#9089fc] opacity-5 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+            style="
+              clip-path: polygon(
+                74.1% 44.1%,
+                100% 61.6%,
+                97.5% 26.9%,
+                85.5% 0.1%,
+                80.7% 2%,
+                72.5% 32.5%,
+                60.2% 62.4%,
+                52.4% 68.1%,
+                47.5% 58.3%,
+                45.2% 34.5%,
+                27.5% 76.7%,
+                0.1% 64.9%,
+                17.9% 100%,
+                27.6% 76.8%,
+                76.1% 97.7%,
+                74.1% 44.1%
+              );
+            "
+          ></div>
+        </div>
+        <div
+          class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-[-100px]"
+          aria-hidden="true"
+        >
+          <div
+            class="relative right-[calc(20%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-0.5 rotate-[30deg] bg-linear-to-tr from-blue-600 to-[#9089fc] opacity-5 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+            style="
+              clip-path: polygon(
+                74.1% 44.1%,
+                100% 61.6%,
+                97.5% 26.9%,
+                85.5% 0.1%,
+                80.7% 2%,
+                72.5% 32.5%,
+                60.2% 62.4%,
+                52.4% 68.1%,
+                47.5% 58.3%,
+                45.2% 34.5%,
+                27.5% 76.7%,
+                0.1% 64.9%,
+                17.9% 100%,
+                27.6% 76.8%,
+                76.1% 97.7%,
+                74.1% 44.1%
+              );
+            "
+          ></div>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <span
+            class="inline-block text-center bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+          >
+            Who we are?
+          </span>
+          <h2 class="text-4xl font-bold text-center">Our Team Members</h2>
+          <p class="text-gray-400 w-full md:w-1/2 px-4 md:px-0 text-center">
+            We’re a dedicated team from ISTAD, building this platform to bring
+            quality tech to everyone.
+          </p>
+        </div>
+
+        <!-- Member card container -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+          <figure
+            class="h-fit p-8 rounded-xl flex flex-col gap-4 bg-white border-2 border-gray-200 md:col-span-2 lg:col-span-1 w-fit justify-self-center"
+          >
+            <div
+              class="h-48 w-48 mx-auto flex justify-center overflow-hidden rounded-full outline-3 outline-blue-600 border-4 border-white"
+            >
+              <img
+                class="w-full hover:scale-125 transition-all ease-in-out duration-500 object-cover"
+                src="../images/members/leng-narak.png"
+                alt="Member 1"
+              />
+            </div>
+            <figcaption class="text-center">
+              <h3 class="text-lg font-semibold">Leng Narak</h3>
+              <p class="text-gray-500">Leader</p>
+            </figcaption>
+            <hr class="rounded-full text-gray-200" />
+            <div class="flex items-center justify-center gap-4">
+              <!-- Social card -->
+              <!-- Facebook -->
+              <a
+                href="#"
+                target="_blank"
+                class="w-12 h-12 rounded-xl bg-gray-200 flex justify-center items-center"
+              >
+                <i class="fa-brands fa-facebook text-2xl text-gray-600"></i>
+              </a>
+              <!-- Telegram -->
+              <a
+                href="https://t.me/Narak_Leng"
+                target="_blank"
+                class="w-12 h-12 rounded-xl bg-gray-200 flex justify-center items-center"
+              >
+                <i class="fa-brands fa-telegram text-2xl text-gray-600"></i>
+              </a>
+            </div>
+          </figure>
+          <figure
+            class="h-fit p-8 rounded-xl flex flex-col gap-4 bg-white border-2 border-gray-200"
+          >
+            <div
+              class="h-48 w-48 mx-auto flex justify-center overflow-hidden rounded-full outline-3 outline-blue-600 border-4 border-white"
+            >
+              <img
+                class="w-full hover:scale-125 transition-all ease-in-out duration-500 object-cover"
+                src="../images/members/but-seavthong.png"
+                alt="Member 1"
+              />
+            </div>
+            <figcaption class="text-center">
+              <h3 class="text-lg font-semibold">But Seavthong</h3>
+              <p class="text-gray-500">Frontend</p>
+            </figcaption>
+            <hr class="rounded-full text-gray-200" />
+            <div class="flex items-center justify-center gap-4">
+              <!-- Social card -->
+              <!-- Facebook -->
+              <a
+                href="#"
+                target="_blank"
+                class="w-12 h-12 rounded-xl bg-gray-200 flex justify-center items-center"
+              >
+                <i class="fa-brands fa-facebook text-2xl text-gray-600"></i>
+              </a>
+              <!-- Telegram -->
+              <a
+                href="https://t.me/ThongFazon"
+                target="_blank"
+                class="w-12 h-12 rounded-xl bg-gray-200 flex justify-center items-center"
+              >
+                <i class="fa-brands fa-telegram text-2xl text-gray-600"></i>
+              </a>
+            </div>
+          </figure>
+          <figure
+            class="h-fit p-8 rounded-xl flex flex-col gap-4 bg-white border-2 border-gray-200"
+          >
+            <div
+              class="h-48 w-48 mx-auto flex justify-center overflow-hidden rounded-full outline-3 outline-blue-600 border-4 border-white"
+            >
+              <img
+                class="w-full hover:scale-125 transition-all ease-in-out duration-500 object-cover"
+                src="../images/members/kong-sisovandara.png"
+                alt="Member 1"
+              />
+            </div>
+            <figcaption class="text-center">
+              <h3 class="text-lg font-semibold">Kong Sisovandara</h3>
+              <p class="text-gray-500">Frontend</p>
+            </figcaption>
+            <hr class="rounded-full text-gray-200" />
+            <div class="flex items-center justify-center gap-4">
+              <!-- Social card -->
+              <!-- Facebook -->
+              <a
+                href="#"
+                target="_blank"
+                class="w-12 h-12 rounded-xl bg-gray-200 flex justify-center items-center"
+              >
+                <i class="fa-brands fa-facebook text-2xl text-gray-600"></i>
+              </a>
+              <!-- Telegram -->
+              <a
+                href="https://t.me/sisovandaraKong"
+                target="_blank"
+                class="w-12 h-12 rounded-xl bg-gray-200 flex justify-center items-center"
+              >
+                <i class="fa-brands fa-telegram text-2xl text-gray-600"></i>
+              </a>
+            </div>
+          </figure>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-5 gap-5">
+          <figure
+            class="h-fit p-8 rounded-xl flex flex-col gap-4 bg-white border-2 border-gray-200"
+          >
+            <div
+              class="h-48 w-48 mx-auto flex justify-center overflow-hidden rounded-full outline-3 outline-blue-600 border-4 border-white"
+            >
+              <img
+                class="w-full hover:scale-125 transition-all ease-in-out duration-500 object-cover"
+                src="../images/members/sorn-sophamarinet.png"
+                alt="Member 1"
+              />
+            </div>
+            <figcaption class="text-center">
+              <h3 class="text-lg font-semibold">Sorn Sophamarinet</h3>
+              <p class="text-gray-500">Frontend</p>
+            </figcaption>
+            <hr class="rounded-full text-gray-200" />
+            <div class="flex items-center justify-center gap-4">
+              <!-- Social card -->
+              <!-- Facebook -->
+              <a
+                href="#"
+                target="_blank"
+                class="w-12 h-12 rounded-xl bg-gray-200 flex justify-center items-center"
+              >
+                <i class="fa-brands fa-facebook text-2xl text-gray-600"></i>
+              </a>
+              <!-- Telegram -->
+              <a
+                href="https://t.me/Cherish_thelife"
+                target="_blank"
+                class="w-12 h-12 rounded-xl bg-gray-200 flex justify-center items-center"
+              >
+                <i class="fa-brands fa-telegram text-2xl text-gray-600"></i>
+              </a>
+            </div>
+          </figure>
+          <figure
+            class="h-fit p-8 rounded-xl flex flex-col gap-4 bg-white border-2 border-gray-200"
+          >
+            <div
+              class="h-48 w-48 mx-auto flex justify-center overflow-hidden rounded-full outline-3 outline-blue-600 border-4 border-white"
+            >
+              <img
+                class="w-full hover:scale-125 transition-all ease-in-out duration-500 object-cover"
+                src="../images/members/khim-sokha.png"
+                alt="Member 1"
+              />
+            </div>
+            <figcaption class="text-center">
+              <h3 class="text-lg font-semibold">Khim Sokha</h3>
+              <p class="text-gray-500">Frontend</p>
+            </figcaption>
+            <hr class="rounded-full text-gray-200" />
+            <div class="flex items-center justify-center gap-4">
+              <!-- Social card -->
+              <!-- Facebook -->
+              <a
+                href="#"
+                target="_blank"
+                class="w-12 h-12 rounded-xl bg-gray-200 flex justify-center items-center"
+              >
+                <i class="fa-brands fa-facebook text-2xl text-gray-600"></i>
+              </a>
+              <!-- Telegram -->
+              <a
+                href="https://t.me/K_JeTaime"
+                target="_blank"
+                class="w-12 h-12 rounded-xl bg-gray-200 flex justify-center items-center"
+              >
+                <i class="fa-brands fa-telegram text-2xl text-gray-600"></i>
+              </a>
+            </div>
+          </figure>
+          <figure
+            class="h-fit p-8 rounded-xl flex flex-col gap-4 bg-white border-2 border-gray-200"
+          >
+            <div
+              class="h-48 w-48 mx-auto flex justify-center overflow-hidden rounded-full outline-3 outline-blue-600 border-4 border-white"
+            >
+              <img
+                class="w-full hover:scale-125 transition-all ease-in-out duration-500 object-cover"
+                src="../images/members/tong-bora.png"
+                alt="Member 1"
+              />
+            </div>
+            <figcaption class="text-center">
+              <h3 class="text-lg font-semibold">Tong Bora</h3>
+              <p class="text-gray-500">Frontend</p>
+            </figcaption>
+            <hr class="rounded-full text-gray-200" />
+            <div class="flex items-center justify-center gap-4">
+              <!-- Social card -->
+              <!-- Facebook -->
+              <a
+                href="#"
+                target="_blank"
+                class="w-12 h-12 rounded-xl bg-gray-200 flex justify-center items-center"
+              >
+                <i class="fa-brands fa-facebook text-2xl text-gray-600"></i>
+              </a>
+              <!-- Telegram -->
+              <a
+                href="https://t.me/tongboraa"
+                target="_blank"
+                class="w-12 h-12 rounded-xl bg-gray-200 flex justify-center items-center"
+              >
+                <i class="fa-brands fa-telegram text-2xl text-gray-600"></i>
+              </a>
+            </div>
+          </figure>
+          <figure
+            class="h-fit p-8 rounded-xl flex flex-col gap-4 bg-white border-2 border-gray-200"
+          >
+            <div
+              class="h-48 w-48 mx-auto flex justify-center overflow-hidden rounded-full outline-3 outline-blue-600 border-4 border-white"
+            >
+              <img
+                class="w-full hover:scale-125 transition-all ease-in-out duration-500 object-cover"
+                src="../images/members/kung-sovannda.JPG"
+                alt="Member 1"
+              />
+            </div>
+            <figcaption class="text-center">
+              <h3 class="text-lg font-semibold">Kung Sovannda</h3>
+              <p class="text-gray-500">Frontend</p>
+            </figcaption>
+            <hr class="rounded-full text-gray-200" />
+            <div class="flex items-center justify-center gap-4">
+              <!-- Social card -->
+              <!-- Facebook -->
+              <a
+                href="#"
+                target="_blank"
+                class="w-12 h-12 rounded-xl bg-gray-200 flex justify-center items-center"
+              >
+                <i class="fa-brands fa-facebook text-2xl text-gray-600"></i>
+              </a>
+              <!-- Telegram -->
+              <a
+                href="https://t.me/Dazurake"
+                target="_blank"
+                class="w-12 h-12 rounded-xl bg-gray-200 flex justify-center items-center"
+              >
+                <i class="fa-brands fa-telegram text-2xl text-gray-600"></i>
+              </a>
+            </div>
+          </figure>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
