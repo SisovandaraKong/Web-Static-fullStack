@@ -13,14 +13,416 @@
   </head>
   <body class="bg-gray-100 font-sans">
     <!-- Main Header -->
+    <header class="bg-white sticky top-0 z-50 shadow-md">
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        aria-label="Global"
+      >
+        <div class="flex lg:flex-1">
+          <a href="../../index.html" class="-m-1.5 p-1.5">
+            <span class="text-black text-3xl font-bold">TopCom</span>
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            id="mobile-menu-toggle"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="size-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+              data-slot="icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <div class="relative">
+            <button
+              type="button"
+              class="flex items-center gap-x-1 text-sm/6 font-semibold hover:text-primary text-gray-900"
+              id="product-dropdown-toggle"
+              aria-expanded="false"
+            >
+              Category
+              <svg
+                class="size-5 flex-none text-gray-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <div
+              class="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 hidden"
+              id="product-dropdown"
+            >
+              <div class="p-4">
+                <div
+                  class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
+                >
+                  <div
+                    class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
+                  >
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                      class="size-6 object-fit-cover text-gray-600 group-hover:text-indigo-600"
+                      alt=""
+                    />
+                  </div>
+                  <div class="flex-auto">
+                    <a
+                      href="#"
+                      class="block font-semibold hover:text-primary text-gray-900"
+                    >
+                      Apple
+                      <span class="absolute inset-0"></span>
+                    </a>
+                    <p class="mt-1 text-gray-600">
+                      Sleek, powerful, premium, secure, reliable
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
+                >
+                  <div
+                    class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
+                  >
+                    <div
+                      class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
+                    >
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dell_Logo.svg/1200px-Dell_Logo.svg.png"
+                        class="size-6 object-fit-cover text-gray-600 group-hover:text-indigo-600"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="flex-auto">
+                    <a
+                      href="#"
+                      class="block hover:text-primary font-semibold text-gray-900"
+                    >
+                      Dell
+                      <span class="absolute inset-0"></span>
+                    </a>
+                    <p class="mt-1 text-gray-600">
+                      Professional, customizable, durable, efficient, modern
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
+                >
+                  <div
+                    class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
+                  >
+                    <div
+                      class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
+                    >
+                      <img
+                        src="https://preview.redd.it/anyone-else-notice-the-msi-logo-is-basicly-gaben-v0-0udbdhvzunga1.jpeg?width=1024&format=pjpg&auto=webp&s=f1b7745392dc73b6512f118f7ea07537686ab4ad"
+                        class="size-6 object-fit-cover text-gray-600 group-hover:text-indigo-600"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="flex-auto">
+                    <a
+                      href="#"
+                      class="block font-semibold hover:text-primary text-gray-900"
+                    >
+                      MSI
+                      <span class="absolute inset-0"></span>
+                    </a>
+                    <p class="mt-1 text-gray-600">
+                      High-performance, gaming, cool, bold, flashy
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
+                >
+                  <div
+                    class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
+                  >
+                    <div
+                      class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
+                    >
+                      <img
+                        src="https://static.cdnlogo.com/logos/a/92/asus.png"
+                        class="size-6 object-fit-cover text-gray-600 group-hover:text-indigo-600"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="flex-auto">
+                    <a
+                      href="#"
+                      class="block font-semibold hover:text-primary text-gray-900"
+                    >
+                      Asus
+                      <span class="absolute inset-0"></span>
+                    </a>
+                    <p class="mt-1 text-gray-600">
+                      Gaming, performance, stylish, affordable, tech-savvy
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
+                >
+                  <div
+                    class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
+                  >
+                    <div
+                      class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
+                    >
+                      <img
+                        src="https://www.citypng.com/public/uploads/preview/hd-acer-brand-logo-png-701751694771852kp0iwua4dk.png"
+                        class="size-6 object-fit-cover text-gray-600 group-hover:text-indigo-600"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="flex-auto">
+                    <a
+                      href="#"
+                      class="block font-semibold hover:text-primary text-gray-900"
+                    >
+                      Acer
+                      <span class="absolute inset-0"></span>
+                    </a>
+                    <p class="mt-1 text-gray-600">
+                      Budget-friendly, lightweight, efficient, student-friendly,
+                      portable
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50"
+              >
+                <a
+                  href="#"
+                  class="flex items-center justify-center hover:text-primary gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
+                >
+                  <svg
+                    class="size-5 flex-none text-gray-400"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    data-slot="icon"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0Zm6.39-2.908a.75.75 0 0 1 .766.027l3.5 2.25a.75.75 0 0 1 0 1.262l-3.5 2.25A.75.75 0 0 1 8 12.25v-4.5a.75.75 0 0 1 .39-.658Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Shape model
+                </a>
+                <a
+                  href="#"
+                  class="flex items-center justify-center hover:text-primary gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
+                >
+                  <svg
+                    class="size-5 flex-none text-gray-400"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    data-slot="icon"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Contact sales
+                </a>
+              </div>
+            </div>
+          </div>
+          <a
+            href="./product.html"
+            class="text-sm/6 font-semibold text-gray-900 hover:text-primary"
+            >Product</a
+          >
+          <a
+            href="#"
+            class="text-sm/6 font-semibold text-gray-900 hover:text-primary"
+            >Contact Us</a
+          >
+          <a
+            href="../aboutUs.html"
+            class="text-sm/6 font-semibold text-gray-900 hover:text-primary"
+            >About Us</a
+          >
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a
+            href="../subPages/registter.html"
+            class="text-sm/6 font-semibold text-gray-900 hover:text-primary"
+            >Log in <span aria-hidden="true">→</span></a
+          >
+        </div>
+      </nav>
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div
+        class="lg:hidden hidden"
+        role="dialog"
+        aria-modal="true"
+        id="mobile-menu"
+      >
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-10"></div>
+        <div
+          class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+        >
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="text-3xl text-black">TopCom</span>
+            </a>
+            <button
+              type="button"
+              class="-m-2.5 rounded-md p-2.5 text-gray-700"
+              id="mobile-menu-close"
+            >
+              <span class="sr-only">Close menu</span>
+              <svg
+                class="size-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                <div class="-mx-3">
+                  <button
+                    type="button"
+                    class="flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    id="mobile-product-toggle"
+                    aria-controls="disclosure-1"
+                    aria-expanded="false"
+                  >
+                    Product
+                    <svg
+                      class="size-5 flex-none"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                      data-slot="icon"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                  <div class="mt-2 space-y-2 hidden" id="disclosure-1">
+                    <a
+                      href="#"
+                      class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
+                      >Apple</a
+                    >
+                    <a
+                      href="#"
+                      class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
+                      >Dell</a
+                    >
+                    <a
+                      href="#"
+                      class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
+                      >MSI</a
+                    >
+                    <a
+                      href="#"
+                      class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
+                      >Asus</a
+                    >
+                    <a
+                      href="#"
+                      class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
+                      >Acer</a
+                    >
+                    <a
+                      href="#"
+                      class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
+                      >Shape model</a
+                    >
+                    <a
+                      href="#"
+                      class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
+                      >Contact sales</a
+                    >
+                  </div>
+                </div>
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  >Product</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  >Contact Us</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  >About Us</a
+                >
+              </div>
+              <div class="py-6">
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  >Log in</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
     <header class="bg-white shadow-md">
       <div class="container mx-auto px-4 py-3">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <!-- Logo and Location -->
           <div class="flex items-center space-x-6 mb-4 md:mb-0">
-            <a href="/" class="flex items-center">
-              <img src="/api/placeholder/100/40" alt="Logo" class="h-10" />
-            </a>
             <div class="hidden md:flex items-center text-sm">
               <i class="fas fa-map-marker-alt mr-1 text-gray-600"></i>
               <span>Choose your location</span>
@@ -70,7 +472,6 @@
                 >0</span
               >
             </a>
-            <div class="hidden md:block">Sign in</div>
           </div>
         </div>
       </div>
@@ -201,7 +602,7 @@
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
           >
             <!-- Product 1 -->
-            <a href="/product-detail.html" class="block">
+            <a href="../subPages/productDetails/Dell E2225H.html" class="block">
               <div class="bg-white rounded-md shadow-md overflow-hidden group">
                 <div class="relative p-4">
                   <img
@@ -247,9 +648,9 @@
                   </h3>
                   <div class="text-xs text-blue-600 mb-3">In Stock</div>
                   <div class="text-xs mb-3">
-                    <div class="mb-1">- Viewable Size: 21.5"</div>
-                    <div class="mb-1">- Resolution: FHD(1920 x 1080)(75Hz)</div>
-                    <div class="mb-1">- Warranty: 3 Years</div>
+                    <div class="mb-1 line-clamp-1">- Viewable Size: 21.5"</div>
+                    <div class="mb-1 line-clamp-1">- Resolution: FHD(1920 x 1080)(75Hz)</div>
+                    <div class="mb-1 line-clamp-1">- Warranty: 3 Years</div>
                   </div>
                   <button
                     class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded flex items-center justify-center"
@@ -261,7 +662,7 @@
             </a>
 
             <!-- Product 2 -->
-            <a href="/product-detail.html" class="block">
+            <a href="../subPages/productDetails/Dell_E2020H.html" class="block">
               <div class="bg-white rounded-md shadow-md overflow-hidden group">
                 <div class="relative p-4">
                   <img
@@ -306,11 +707,9 @@
                   </h3>
                   <div class="text-xs text-blue-600 mb-3">In Stock</div>
                   <div class="text-xs mb-3">
-                    <div class="mb-1">
-                      - Viewable Size: 19.5''
-                    </div>
-                    <div class="mb-1">- Resolution: HD (1600 x 900) (60Hz)</div>
-                    <div class="mb-1">- Warranty: 3 Years</div>
+                    <div class="mb-1 line-clamp-1">- Viewable Size: 19.5''</div>
+                    <div class="mb-1 line-clamp-1">- Resolution: HD (1600 x 900) (60Hz)</div>
+                    <div class="mb-1 line-clamp-1">- Warranty: 3 Years</div>
                   </div>
                   <button
                     class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded flex items-center justify-center"
@@ -322,7 +721,7 @@
             </a>
 
             <!-- Product 3 -->
-            <a href="/product-detail.html" class="block">
+            <a href="../subPages/productDetails/SA220Q.html" class="block">
               <div class="bg-white rounded-md shadow-md overflow-hidden group">
                 <div class="relative p-4">
                   <img
@@ -363,15 +762,14 @@
                     <i class="far fa-star text-gray-300"></i>
                   </div>
                   <h3 class="text-sm font-medium mb-2 line-clamp-2">
-                    LED Monitor ACER 21.5''-SA220Q Abi -IPS FHD 1920x1080-16:9 4ms 250nits (Port: VGA,HDMI) HDMI CB,3Y
+                    LED Monitor ACER 21.5''-SA220Q Abi -IPS FHD 1920x1080-16:9
+                    4ms 250nits (Port: VGA,HDMI) HDMI CB,3Y
                   </h3>
                   <div class="text-xs text-blue-600 mb-3">In Stock</div>
                   <div class="text-xs mb-3">
-                    <div class="mb-1">
-                        - Viewable Size: 21.5"
-                    </div>
-                    <div class="mb-1">- Resolution: FHD(1920 x 1080)(75Hz)</div>
-                    <div class="mb-1">- Warranty: 3 Years</div>
+                    <div class="mb-1 line-clamp-1">- Viewable Size: 21.5"</div>
+                    <div class="mb-1 line-clamp-1">- Resolution: FHD(1920 x 1080)(75Hz)</div>
+                    <div class="mb-1 line-clamp-1">- Warranty: 3 Years</div>
                   </div>
                   <button
                     class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded flex items-center justify-center"
@@ -383,7 +781,7 @@
             </a>
 
             <!-- Product 4 -->
-            <a href="/product-detail.html" class="block">
+            <a href="../subPages/productDetails/S2425H.html" class="block">
               <div class="bg-white rounded-md shadow-md overflow-hidden group">
                 <div class="relative p-4">
                   <img
@@ -424,15 +822,16 @@
                     <i class="far fa-star text-gray-300"></i>
                   </div>
                   <h3 class="text-sm font-medium mb-2 line-clamp-2">
-                    LED Monitor Dell 23.8'' S2425H (Build in Speaker) IPS FHD(1920x1080) 100Hz
+                    LED Monitor Dell 23.8'' S2425H (Build in Speaker) IPS
+                    FHD(1920x1080) 100Hz
                   </h3>
                   <div class="text-xs text-blue-600 mb-3">In Stock</div>
                   <div class="text-xs mb-3">
-                    <div class="mb-1">- Viewable Size: 23.8"</div>
-                    <div class="mb-1">- Resolution: FHD(1920 x 1080)(100Hz)</div>
-                    <div class="mb-1">
-                        - Warranty: 3 Years
+                    <div class="mb-1 line-clamp-1">- Viewable Size: 23.8"</div>
+                    <div class="mb-1 line-clamp-1">
+                      - Resolution: FHD(1920 x 1080)(100Hz)
                     </div>
+                    <div class="mb-1 line-clamp-1">- Warranty: 3 Years</div>
                   </div>
                   <button
                     class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded flex items-center justify-center"
@@ -444,7 +843,7 @@
             </a>
 
             <!-- Product 5 -->
-            <a href="/product-detail.html" class="block">
+            <a href="../subPages/productDetails/SE2425H.html" class="block">
               <div class="bg-white rounded-md shadow-md overflow-hidden group">
                 <div class="relative p-4">
                   <img
@@ -473,10 +872,10 @@
                   </div>
                 </div>
                 <div class="p-4">
-                    <div class="flex justify-between mb-2">
-                        <span class="font-bold text-lg text-gray-800">$109</span>
-                        <span class="text-sm text-gray-600">MOD-SE2425H</span>
-                    </div>
+                  <div class="flex justify-between mb-2">
+                    <span class="font-bold text-lg text-gray-800">$109</span>
+                    <span class="text-sm text-gray-600">MOD-SE2425H</span>
+                  </div>
                   <div class="flex mb-2">
                     <i class="far fa-star text-gray-300"></i>
                     <i class="far fa-star text-gray-300"></i>
@@ -485,13 +884,14 @@
                     <i class="far fa-star text-gray-300"></i>
                   </div>
                   <h3 class="text-sm font-medium mb-2 line-clamp-2">
-                    LED Monitor Dell 24" SE2425H With FHD (1920x1080) 75Hz (Port: HDMI-VGA) (HDMI CB) 3Y
+                    LED Monitor Dell 24" SE2425H With FHD (1920x1080) 75Hz
+                    (Port: HDMI-VGA) (HDMI CB) 3Y
                   </h3>
                   <div class="text-xs text-blue-600 mb-3">In Stock</div>
                   <div class="text-xs mb-3">
-                    <div class="mb-1">- Viewable Size: 23.8''</div>
-                    <div class="mb-1">- Resolution: FHD(1920x1080)(75Hz)</div>
-                    <div class="mb-1">- Warranty: 3 Years</div>
+                    <div class="mb-1 line-clamp-1">- Viewable Size: 23.8''</div>
+                    <div class="mb-1 line-clamp-1">- Resolution: FHD(1920x1080)(75Hz)</div>
+                    <div class="mb-1 line-clamp-1">- Warranty: 3 Years</div>
                   </div>
                   <button
                     class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded flex items-center justify-center"
@@ -503,7 +903,7 @@
             </a>
 
             <!-- Product 6 -->
-            <a href="/product-detail.html" class="block">
+            <a href="../subPages/productDetails/Dell E2225H.html" class="block">
               <div class="bg-white rounded-md shadow-md overflow-hidden group">
                 <div class="relative p-4">
                   <img
@@ -537,9 +937,7 @@
                 <div class="p-4">
                   <div class="flex justify-between mb-2">
                     <span class="font-bold text-lg text-gray-800">$105</span>
-                    <span class="text-sm text-gray-600">
-                      MOD-E2223HN
-                      </span>
+                    <span class="text-sm text-gray-600"> MOD-E2223HN </span>
                   </div>
                   <div class="flex mb-2">
                     <i class="far fa-star text-gray-300"></i>
@@ -553,11 +951,9 @@
                   </h3>
                   <div class="text-xs text-blue-600 mb-3">In Stock</div>
                   <div class="text-xs mb-3">
-                    <div class="mb-1">
-                      - Viewable Size: 21.45"
-                    </div>
-                    <div class="mb-1">- Resolution: FHD(1920 x 1080)(60Hz)</div>
-                    <div class="mb-1">- Warranty: 3 Years</div>
+                    <div class="mb-1 line-clamp-1">- Viewable Size: 21.45"</div>
+                    <div class="mb-1 line-clamp-1">- Resolution: FHD(1920 x 1080)(60Hz)</div>
+                    <div class="mb-1 line-clamp-1">- Warranty: 3 Years</div>
                   </div>
                   <button
                     class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded flex items-center justify-center"
@@ -570,7 +966,7 @@
             </a>
 
             <!-- Product 7 -->
-            <a href="/product-detail.html" class="block">
+            <a href="#" class="block">
               <div class="bg-white rounded-md shadow-md overflow-hidden group">
                 <div class="relative p-4">
                   <img
@@ -618,11 +1014,11 @@
                   </h3>
                   <div class="text-xs text-blue-600 mb-3">In Stock</div>
                   <div class="text-xs mb-3">
-                    <div class="mb-1">
-                      - Viewable Size: 23.8"
+                    <div class="mb-1 line-clamp-1">- Viewable Size: 23.8"</div>
+                    <div class="mb-1 line-clamp-1">
+                      - Resolution: FHD (1920 x 1080)(60Hz)
                     </div>
-                    <div class="mb-1">- Resolution: FHD (1920 x 1080)(60Hz)</div>
-                    <div class="mb-1">- Warranty: 3 Years</div>
+                    <div class="mb-1 line-clamp-1">- Warranty: 3 Years</div>
                   </div>
                   <button
                     class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded flex items-center justify-center"
@@ -635,7 +1031,7 @@
             </a>
 
             <!-- Product 8 -->
-            <a href="/product-detail.html" class="block">
+            <a href="#" class="block">
               <div class="bg-white rounded-md shadow-md overflow-hidden group">
                 <div class="relative p-4">
                   <img
@@ -679,13 +1075,16 @@
                     <i class="far fa-star text-gray-300"></i>
                   </div>
                   <h3 class="text-sm font-medium mb-2 line-clamp-2">
-                    LED Monitor Dell 27'' S2725H With IPS FHD(1920 x 1080) 100Hz Build in Speaker
+                    LED Monitor Dell 27'' S2725H With IPS FHD(1920 x 1080) 100Hz
+                    Build in Speaker
                   </h3>
                   <div class="text-xs text-blue-600 mb-3">In Stock</div>
                   <div class="text-xs mb-3">
-                    <div class="mb-1">- Viewable Size: 27"</div>
-                    <div class="mb-1">- Resolution: FHD(1920 x 1080)(100Hz)</div>
-                    <div class="mb-1">- Warranty: 3 years</div>
+                    <div class="mb-1 line-clamp-1">- Viewable Size: 27"</div>
+                    <div class="mb-1 line-clamp-1">
+                      - Resolution: FHD(1920 x 1080)(100Hz)
+                    </div>
+                    <div class="mb-1 line-clamp-1">- Warranty: 3 years</div>
                   </div>
                   <button
                     class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded flex items-center justify-center"
@@ -700,5 +1099,158 @@
         </div>
       </div>
     </main>
+    <!-- Footer -->
+    <footer
+      class="w-full bg-gray-100 py-12"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-center mb-4">
+              <h3 class="text-xl font-bold text-gray-800">TopCom Computer</h3>
+            </div>
+            <p class="text-gray-600 text-sm mb-2">Opening Hours:</p>
+            <p class="text-gray-600 text-sm">
+              Monday to Sunday, 8:00 AM to 5:30 PM
+            </p>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="400">
+            <h3 class="text-lg font-bold text-gray-800 mb-4">Contact Us</h3>
+            <p class="text-gray-600 text-sm mb-2">Sales Showroom:</p>
+            <p class="text-gray-600 text-sm mb-1">📞 012 220 152</p>
+            <p class="text-gray-600 text-sm mb-1">📞 093 456 747</p>
+            <p class="text-gray-600 text-sm mb-4">📞 071 5777 378</p>
+            <p class="text-gray-600 text-sm mb-2">Service Center:</p>
+            <p class="text-gray-600 text-sm mb-1">📞 012 220 135</p>
+            <p class="text-gray-600 text-sm mb-1">📞 093 456 735</p>
+            <p class="text-gray-600 text-sm">📞 031 320 135</p>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="600">
+            <h3 class="text-lg font-bold text-gray-800 mb-4">
+              Conditions Apply
+            </h3>
+            <a
+              href="#"
+              class="block text-gray-600 text-sm mb-2 hover:text-gray-800"
+              >Terms & Conditions</a
+            >
+            <a
+              href="#"
+              class="block text-gray-600 text-sm mb-2 hover:text-gray-800"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="block text-gray-600 text-sm mb-2 hover:text-gray-800"
+              >About Us</a
+            >
+            <a href="#" class="block text-gray-600 text-sm hover:text-gray-800"
+              >Help</a
+            >
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="800">
+            <h3 class="text-lg font-bold text-gray-800 mb-4">My Account</h3>
+            <a
+              href="#"
+              class="block text-gray-600 text-sm mb-2 hover:text-gray-800"
+              >Login</a
+            >
+            <a
+              href="#"
+              class="block text-gray-600 text-sm mb-2 hover:text-gray-800"
+              >Order History</a
+            >
+            <a
+              href="#"
+              class="block text-gray-600 text-sm mb-2 hover:text-gray-800"
+              >My Wishlist</a
+            >
+            <a href="#" class="block text-gray-600 text-sm hover:text-gray-800"
+              >Track Order</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const productToggle = document.getElementById(
+          "product-dropdown-toggle"
+        );
+        const productDropdown = document.getElementById("product-dropdown");
+
+        productToggle.addEventListener("click", () => {
+          const isHidden = productDropdown.classList.contains("hidden");
+          productDropdown.classList.toggle("hidden", !isHidden);
+
+          if (isHidden) {
+            productDropdown.classList.add(
+              "transition",
+              "ease-out",
+              "duration-200",
+              "opacity-100",
+              "translate-y-0"
+            );
+            productDropdown.classList.remove("opacity-0", "translate-y-1");
+          } else {
+            productDropdown.classList.add(
+              "transition",
+              "ease-in",
+              "duration-150",
+              "opacity-0",
+              "translate-y-1"
+            );
+            setTimeout(() => {
+              productDropdown.classList.add("hidden");
+              productDropdown.classList.remove(
+                "transition",
+                "ease-in",
+                "duration-150",
+                "opacity-0",
+                "translate-y-1",
+                "opacity-100",
+                "translate-y-0"
+              );
+            }, 150);
+          }
+
+          productToggle.setAttribute("aria-expanded", isHidden);
+        });
+
+        const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const mobileMenuClose = document.getElementById("mobile-menu-close");
+
+        mobileMenuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        mobileMenuClose.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+
+        const mobileProductToggle = document.getElementById(
+          "mobile-product-toggle"
+        );
+        const mobileProductMenu = document.getElementById("disclosure-1");
+        const mobileProductIcon = mobileProductToggle.querySelector("svg");
+
+        mobileProductToggle.addEventListener("click", () => {
+          const isHidden = mobileProductMenu.classList.contains("hidden");
+          mobileProductMenu.classList.toggle("hidden", !isHidden);
+          mobileProductIcon.classList.toggle("rotate-180", isHidden);
+          mobileProductToggle.setAttribute("aria-expanded", isHidden);
+        });
+      });
+    </script>
   </body>
 </html>
