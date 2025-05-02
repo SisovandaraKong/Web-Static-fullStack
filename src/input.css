@@ -4,4 +4,5 @@
 @source "../node_modules/flowbite";
 @theme {
     --font-sans: InterVariable, sans-serif;
+    --color-primary: #FFD700;
   }

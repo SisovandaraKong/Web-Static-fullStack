@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Computer Cambodia</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../output.css" />
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <!-- Main Header -->
+    <header class="bg-white shadow-md">
+      <div class="container mx-auto px-4 py-3">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <!-- Logo and Location -->
+          <div class="flex items-center space-x-6 mb-4 md:mb-0">
+            <a href="/" class="flex items-center">
+              <img src="/api/placeholder/100/40" alt="Logo" class="h-10" />
+            </a>
+            <div class="hidden md:flex items-center text-sm">
+              <i class="fas fa-map-marker-alt mr-1 text-gray-600"></i>
+              <span>Choose your location</span>
+            </div>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="w-full md:w-1/2 mb-4 md:mb-0">
+            <div class="flex">
+              <div class="relative w-full">
+                <select
+                  class="appearance-none bg-gray-100 border border-gray-300 text-gray-700 py-2.5 px-4 pr-8 rounded-l leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                >
+                  <option>Search By</option>
+                  <option>Products</option>
+                  <option>Brands</option>
+                </select>
+                <input
+                  type="text"
+                  placeholder="Search for..."
+                  class="flex-grow border border-gray-300 py-2 px-4 focus:outline-none"
+                />
+                <button
+                  class="bg-black hover:bg-gray-400 text-white px-4 py-2 rounded-r"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- User Actions -->
+          <div class="flex items-center space-x-6">
+            <a href="#" class="flex flex-col items-center relative">
+              <i class="far fa-heart text-lg"></i>
+              <span class="text-xs">Wishlist</span>
+              <span
+                class="absolute -top-1 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"
+                >0</span
+              >
+            </a>
+            <a href="#" class="flex flex-col items-center relative">
+              <i class="fas fa-shopping-cart text-lg"></i>
+              <span class="text-xs">Cart</span>
+              <span
+                class="absolute -top-1 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"
+                >0</span
+              >
+            </a>
+            <div class="hidden md:block">Sign in</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+      <div class="container mx-auto px-4">
+        <div
+          class="flex overflow-x-auto md:overflow-visible whitespace-nowrap py-2"
+        >
+          <button class="md:hidden p-2 mr-2">
+            <i class="fas fa-bars"></i>
+          </button>
+          <a
+            href="../../index.html"
+            class="px-3 py-2 hover:text-blue-600 font-medium"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="px-3 py-2 hover:text-blue-600 font-medium bg-gray-100 rounded-md text-blue-600 relative group"
+          >
+            Special Offer
+            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+          </a>
+          <a
+            href="./product.html"
+            class="px-3 py-2 hover:text-blue-600 font-medium flex items-center"
+          >
+            Shop
+            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+          </a>
+          <a href="./laptop.html" class="px-3 py-2 hover:text-blue-600 font-medium"
+            >Laptop / Desktop</a
+          >
+          <a
+            href="#"
+            class="px-3 py-2 hover:text-blue-600 font-medium"
+            >Accessories</a
+          >
+          <a
+            href="./monitor.html"
+            class="px-3 py-2 hover:text-blue-600 font-medium"
+            >Monitor & Display</a
+          >
+        </div>
+      </div>
+    </nav>
+    <div class="bg-gray-100 py-2">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center text-sm text-gray-600">
+          <a href="../../index.html" class="hover:text-blue-600">Home</a>
+          <span class="mx-2">/</span>
+          <span class="font-medium">"All Categories"</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-6">
+      <div class="flex flex-col md:flex-row">
+        <!-- Left Sidebar - Categories -->
+        <div class="w-full md:w-1/4 lg:w-1/5 xl:w-1/6 mb-6 md:mb-0 md:pr-6">
+          <div class="bg-white p-4 rounded shadow">
+            <h2 class="text-lg font-bold mb-4">Categories</h2>
+            <ul>
+              <a href="./laptop.html"
+                ><li
+                  class="py-2 border-b flex justify-between items-center hover:bg-blue-600 hover:text-white px-2"
+                >
+                  <span>Laptop</span>
+                  <i class="fas fa-chevron-right text-gray-400"></i></li
+              ></a>
+              <a href="#"
+                ><li
+                  class="py-2 border-b flex justify-between items-center hover:bg-blue-600 hover:text-white px-2"
+                >
+                  <span>Accessories</span>
+                  <i class="fas fa-chevron-right text-gray-400"></i></li
+              ></a>
+              <a href="./monitor.html">
+                <li
+                  class="py-2 border-b flex justify-between items-center hover:bg-blue-600 hover:text-white px-2"
+                >
+                  <span>Monitor & Display</span>
+                  <i class="fas fa-chevron-right text-gray-400"></i>
+                </li>
+              </a>
+            </ul>
+          </div>
+        </div>
+        <!-- Main Products Area -->
+        <div class="w-full md:w-3/4 lg:w-4/5">
+          <h1 class="text-xl font-bold mb-4">All Products</h1>
+          <!-- Sort and Filter -->
+          <div class="flex flex-col md:flex-row justify-between mb-6">
+            <div class="mb-4 md:mb-0">
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >Brands</label
+              >
+              <select
+                class="w-full md:w-48 border border-gray-300 rounded px-4 py-2"
+              >
+                <option>All Brands</option>
+                <option>Dell</option>
+                <option>Lenovo</option>
+                <option>HP</option>
+                <option>Apple</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >Sort by</label
+              >
+              <select
+                class="w-full md:w-48 border border-gray-300 rounded px-4 py-2"
+              >
+                <option>Newest</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Best Selling</option>
+              </select>
+            </div>
+          </div>
+          <!-- Products Grid -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          >
+            <!-- Product 1 -->
+            <a href="/product-detail.html" class="block">
+              <div class="bg-white rounded-md shadow-md overflow-hidden group">
+                <div class="relative p-4">
+                  <img
+                    src="https://s3.ap-southeast-1.amazonaws.com/uploads-store/uploads/all/ZHSa9WHDDjmJrkh8ZThNLP1Cj75TkoC7h89f3bwE.png"
+                    alt="Dell Inspiron AIO 5430"
+                    class="mx-auto h-40 object-contain"
+                  />
+                  <button
+                    class="absolute top-4 right-4 text-gray-400 hover:text-red-500"
+                  >
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <div
+                    class="opacity-0 group-hover:opacity-100 absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 transition-opacity"
+                  >
+                    <button
+                      class="bg-white rounded-full p-2 mx-1 hover:bg-gray-100"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="bg-white rounded-full p-2 mx-1 hover:bg-gray-100"
+                    >
+                      <i class="fas fa-sync-alt"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="p-4">
+                  <div class="flex justify-between mb-2">
+                    <span class="font-bold text-lg text-gray-800">$2,640</span>
+                    <span class="text-sm text-gray-600">PTT-2021AC</span>
+                  </div>
+                  <div class="flex mb-2">
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                  </div>
+                  <h3 class="text-sm font-medium mb-2 line-clamp-2">
+                    Toshiba Photocopy Color e-Studio 2021AC ASD -(Copy, print,
+                    scan)(A3&A4)-(Toner built-in K,C,Y,M)
+                  </h3>
+                  <div class="text-xs text-blue-600 mb-3">In Stock</div>
+                  <div class="text-xs mb-3">
+                    <div class="mb-1">- Function: Copy, Print, Scan (A3)</div>
+                    <div class="mb-1">- Print Speed: 20cpm</div>
+                    <div class="mb-1">- Warranty: 1 Year on service</div>
+                  </div>
+                  <button
+                    class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded flex items-center justify-center"
+                  >
+                    <i class="fas fa-shopping-cart mr-2"></i> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </a>
+
+            <!-- Product 2 -->
+            <a href="/product-detail.html" class="block">
+              <div class="bg-white rounded-md shadow-md overflow-hidden group">
+                <div class="relative p-4">
+                  <img
+                    src="https://s3.ap-southeast-1.amazonaws.com/uploads-store/uploads/all/ZHSa9WHDDjmJrkh8ZThNLP1Cj75TkoC7h89f3bwE.png"
+                    alt="Lenovo Idea Centre"
+                    class="mx-auto h-40 object-contain"
+                  />
+                  <button
+                    class="absolute top-4 right-4 text-gray-400 hover:text-red-500"
+                  >
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <div
+                    class="opacity-0 group-hover:opacity-100 absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 transition-opacity"
+                  >
+                    <button
+                      class="bg-white rounded-full p-2 mx-1 hover:bg-gray-100"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="bg-white rounded-full p-2 mx-1 hover:bg-gray-100"
+                    >
+                      <i class="fas fa-sync-alt"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="p-4">
+                  <div class="flex justify-between mb-2">
+                    <span class="font-bold text-lg text-gray-800">$2,900</span>
+                    <span class="text-sm text-gray-600">PTT-2521AC</span>
+                  </div>
+                  <div class="flex mb-2">
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                  </div>
+                  <h3 class="text-sm font-medium mb-2 line-clamp-2">
+                    Toshiba Photocopy Color e-Studio 2521AC ASD (Copy, print,
+                    scan)(A3&A4)(Built-in toner C,Y,M,K)1Y
+                  </h3>
+                  <div class="text-xs text-blue-600 mb-3">In Stock</div>
+                  <div class="text-xs mb-3">
+                    <div class="mb-1">- Function: Copy, Print, Scan (A3)</div>
+                    <div class="mb-1">- Print Speed: 25cpm</div>
+                    <div class="mb-1">- Warranty: 1 Year on service</div>
+                  </div>
+                  <button
+                    class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded flex items-center justify-center"
+                  >
+                    <i class="fas fa-shopping-cart mr-2"></i> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </a>
+
+            <!-- Product 3 -->
+            <a href="/product-detail.html" class="block">
+              <div class="bg-white rounded-md shadow-md overflow-hidden group">
+                <div class="relative p-4">
+                  <img
+                    src="https://s3.ap-southeast-1.amazonaws.com/uploads-store/uploads/all/ZpsdlZuZ9MTRJTGBrV1O4J4eYRgJFFL8sBrPUqXw.png"
+                    alt="Dell Inspiron Laptop"
+                    class="mx-auto h-40 object-contain"
+                  />
+                  <button
+                    class="absolute top-4 right-4 text-gray-400 hover:text-red-500"
+                  >
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <div
+                    class="opacity-0 group-hover:opacity-100 absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 transition-opacity"
+                  >
+                    <button
+                      class="bg-white rounded-full p-2 mx-1 hover:bg-gray-100"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="bg-white rounded-full p-2 mx-1 hover:bg-gray-100"
+                    >
+                      <i class="fas fa-sync-alt"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="p-4">
+                  <div class="flex justify-between mb-2">
+                    <span class="font-bold text-lg text-gray-800"> $1,099</span>
+                    <span class="text-sm text-gray-600">PTT-2329A</span>
+                  </div>
+                  <div class="flex mb-2">
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                  </div>
+                  <h3 class="text-sm font-medium mb-2 line-clamp-2">
+                    TOSHIBA Photocopy E-Studio DP-2329A ASD
+                    (Copy,Print,Scan)A3/A4(w/Drum, Toner, Developer) 6AG00009281
+                  </h3>
+                  <div class="text-xs text-blue-600 mb-3">In Stock</div>
+                  <div class="text-xs mb-3">
+                    <div class="mb-1">- Function: Copy, Print, Scan (A3)</div>
+                    <div class="mb-1">- Print Speed: 25cpm</div>
+                    <div class="mb-1">- Warranty: 1 Year on service</div>
+                  </div>
+                  <button
+                    class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded flex items-center justify-center"
+                  >
+                    <i class="fas fa-shopping-cart mr-2"></i> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </a>
+
+            <!-- Product 4 -->
+            <a href="/product-detail.html" class="block">
+              <div class="bg-white rounded-md shadow-md overflow-hidden group">
+                <div class="relative p-4">
+                  <img
+                    src="https://s3.ap-southeast-1.amazonaws.com/uploads-store/uploads/all/4DmjSrhWwss5fWYOLG0mZVksULUXYZDukD0gb3DO.png"
+                    alt="Dell Monitor"
+                    class="mx-auto h-40 object-contain"
+                  />
+                  <button
+                    class="absolute top-4 right-4 text-gray-400 hover:text-red-500"
+                  >
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <div
+                    class="opacity-0 group-hover:opacity-100 absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 transition-opacity"
+                  >
+                    <button
+                      class="bg-white rounded-full p-2 mx-1 hover:bg-gray-100"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="bg-white rounded-full p-2 mx-1 hover:bg-gray-100"
+                    >
+                      <i class="fas fa-sync-alt"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="p-4">
+                  <div class="flex justify-between mb-2">
+                    <span class="font-bold text-lg text-gray-800">$4,599</span>
+                    <span class="text-sm text-gray-600">PT-213</span>
+                  </div>
+                  <div class="flex mb-2">
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                  </div>
+                  <h3 class="text-sm font-medium mb-2 line-clamp-2">
+                    TOSHIBA Photocopy E-Studio DP-6518A ASD B&W
+                    A3&A4-Network,Copy,Print,Fax,and Scan MFP-No Toner
+                  </h3>
+                  <div class="text-xs text-blue-600 mb-3">In Stock</div>
+                  <div class="text-xs mb-3">
+                    <div class="mb-1">- Function: Copy + print + scan</div>
+                    <div class="mb-1">- Copy Speed (ppm): 65ppm</div>
+                    <div class="mb-1">- Warranty 1Year on services</div>
+                  </div>
+                  <button
+                    class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded flex items-center justify-center"
+                  >
+                    <i class="fas fa-shopping-cart mr-2"></i> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </a>
+
+            <!-- Product 5 -->
+            <a href="/product-detail.html" class="block">
+              <div class="bg-white rounded-md shadow-md overflow-hidden group">
+                <div class="relative p-4">
+                  <img
+                    src="https://s3.ap-southeast-1.amazonaws.com/uploads-store/uploads/all/ew2TLhVx62RJgaOu4qhuWP1qPgjU9AMCCDZ6jz17.png"
+                    alt="Lenovo Idea Centre"
+                    class="mx-auto h-40 object-contain"
+                  />
+                  <button
+                    class="absolute top-4 right-4 text-gray-400 hover:text-red-500"
+                  >
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <div
+                    class="opacity-0 group-hover:opacity-100 absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 transition-opacity"
+                  >
+                    <button
+                      class="bg-white rounded-full p-2 mx-1 hover:bg-gray-100"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="bg-white rounded-full p-2 mx-1 hover:bg-gray-100"
+                    >
+                      <i class="fas fa-sync-alt"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="p-4">
+                  <div class="flex justify-between mb-2">
+                    <span class="font-bold text-lg text-gray-800">$5,085</span>
+                    <span class="text-sm text-gray-600">PTT-3525AC-1</span>
+                  </div>
+                  <div class="flex mb-2">
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                  </div>
+                  <h3 class="text-sm font-medium mb-2 line-clamp-2">
+                    Toshiba photocopy E-STUDIO 3525AC ASD with BIS Mark Color
+                    (Copy, Print, Scan) (A4&A3)
+                  </h3>
+                  <div class="text-xs text-blue-600 mb-3">In Stock</div>
+                  <div class="text-xs mb-3">
+                    <div class="mb-1">- Function: Copy, Print, Scan</div>
+                    <div class="mb-1">-- Print Speed: 35cpm</div>
+                    <div class="mb-1">- Warranty: 1 Year on service</div>
+                  </div>
+                  <button
+                    class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded flex items-center justify-center"
+                  >
+                    <i class="fas fa-shopping-cart mr-2"></i> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </a>
+
+            <!-- Product 6 -->
+            <a href="/product-detail.html" class="block">
+              <div class="bg-white rounded-md shadow-md overflow-hidden group">
+                <div class="relative p-4">
+                  <img
+                    src="https://s3.ap-southeast-1.amazonaws.com/uploads-store/uploads/all/ew2TLhVx62RJgaOu4qhuWP1qPgjU9AMCCDZ6jz17.png"
+                    alt="Dell Inspiron AIO 5430"
+                    class="mx-auto h-40 object-contain"
+                  />
+                  <button
+                    class="absolute top-4 right-4 text-gray-400 hover:text-red-500"
+                    onclick="event.preventDefault();"
+                  >
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <div
+                    class="opacity-0 group-hover:opacity-100 absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 transition-opacity"
+                  >
+                    <button
+                      class="bg-white rounded-full p-2 mx-1 hover:bg-gray-100"
+                      onclick="event.preventDefault();"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="bg-white rounded-full p-2 mx-1 hover:bg-gray-100"
+                      onclick="event.preventDefault();"
+                    >
+                      <i class="fas fa-sync-alt"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="p-4">
+                  <div class="flex justify-between mb-2">
+                    <span class="font-bold text-lg text-gray-800">$3,158</span>
+                    <span class="text-sm text-gray-600">PTT-3528A-1</span>
+                  </div>
+                  <div class="flex mb-2">
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                  </div>
+                  <h3 class="text-sm font-medium mb-2 line-clamp-2">
+                    TOSHIBA Photocopy e-STUDIO 3528A ASD (Black & White) (Copy,
+                    Print, Scan)(A4&A3)
+                  </h3>
+                  <div class="text-xs text-blue-600 mb-3">In Stock</div>
+                  <div class="text-xs mb-3">
+                    <div class="mb-1">- Function: Print, Scan, Copy</div>
+                    <div class="mb-1">- Print Speed: 35cpm</div>
+                    <div class="mb-1">- Warranty: 1 Year on service</div>
+                  </div>
+                  <button
+                    class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded flex items-center justify-center"
+                    onclick="event.preventDefault();"
+                  >
+                    <i class="fas fa-shopping-cart mr-2"></i> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </a>
+
+            <!-- Product 7 -->
+            <a href="/product-detail.html" class="block">
+              <div class="bg-white rounded-md shadow-md overflow-hidden group">
+                <div class="relative p-4">
+                  <img
+                    src="https://s3.ap-southeast-1.amazonaws.com/uploads-store/uploads/all/ottVKF8HQk5cFkJDmzZmvhib1oQcjRqCwQBbiTuX.png"
+                    alt="Dell Inspiron AIO 5430"
+                    class="mx-auto h-40 object-contain"
+                  />
+                  <button
+                    class="absolute top-4 right-4 text-gray-400 hover:text-red-500"
+                    onclick="event.preventDefault();"
+                  >
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <div
+                    class="opacity-0 group-hover:opacity-100 absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 transition-opacity"
+                  >
+                    <button
+                      class="bg-white rounded-full p-2 mx-1 hover:bg-gray-100"
+                      onclick="event.preventDefault();"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="bg-white rounded-full p-2 mx-1 hover:bg-gray-100"
+                      onclick="event.preventDefault();"
+                    >
+                      <i class="fas fa-sync-alt"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="p-4">
+                  <div class="flex justify-between mb-2">
+                    <span class="font-bold text-lg text-gray-800">$6,799</span>
+                    <span class="text-sm text-gray-600">PT-258</span>
+                  </div>
+                  <div class="flex mb-2">
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                  </div>
+                  <h3 class="text-sm font-medium mb-2 line-clamp-2">
+                    TOSHIBA Photocopy E-Studio DP-7518A ASD (6AG00008382) *No
+                    Toner
+                  </h3>
+                  <div class="text-xs text-blue-600 mb-3">In Stock</div>
+                  <div class="text-xs mb-3">
+                    <div class="mb-1">- Function: Copy + print + scan</div>
+                    <div class="mb-1">- Copy Speed (ppm): 75ppm</div>
+                    <div class="mb-1">- Warranty 1Year on services</div>
+                  </div>
+                  <button
+                    class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded flex items-center justify-center"
+                    onclick="event.preventDefault();"
+                  >
+                    <i class="fas fa-shopping-cart mr-2"></i> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </a>
+
+            <!-- Product 8 -->
+            <a href="/product-detail.html" class="block">
+              <div class="bg-white rounded-md shadow-md overflow-hidden group">
+                <div class="relative p-4">
+                  <img
+                    src="https://s3.ap-southeast-1.amazonaws.com/uploads-store/uploads/all/4fLngZaDIjNeCSNNFR5tu1aDtpvjxKEN355vFks6.png"
+                    alt="Dell Inspiron AIO 5430"
+                    class="mx-auto h-40 object-contain"
+                  />
+                  <button
+                    class="absolute top-4 right-4 text-gray-400 hover:text-red-500"
+                    onclick="event.preventDefault();"
+                  >
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <div
+                    class="opacity-0 group-hover:opacity-100 absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 transition-opacity"
+                  >
+                    <button
+                      class="bg-white rounded-full p-2 mx-1 hover:bg-gray-100"
+                      onclick="event.preventDefault();"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="bg-white rounded-full p-2 mx-1 hover:bg-gray-100"
+                      onclick="event.preventDefault();"
+                    >
+                      <i class="fas fa-sync-alt"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="p-4">
+                  <div class="flex justify-between mb-2">
+                    <span class="font-bold text-lg text-gray-800">$650</span>
+                    <span class="text-sm text-gray-600">PT-398</span>
+                  </div>
+                  <div class="flex mb-2">
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                    <i class="far fa-star text-gray-300"></i>
+                  </div>
+                  <h3 class="text-sm font-medium mb-2 line-clamp-2">
+                    Wireless Lan Module GN-4020 for
+                    e2508A/e3518A/e3008A/e3508A/e4508A/e5008A/e5518A)
+                    (6AG00007054)
+                  </h3>
+                  <div class="text-xs text-blue-600 mb-3">In Stock</div>
+                  <!-- <div class="text-xs mb-3">
+                    <div class="mb-1">- CPU: Intel Core™ i5-13500H</div>
+                    <div class="mb-1">- OS: Window 11 Home SL License</div>
+                    <div class="mb-1">-- Warranty: 2years</div>
+                  </div> -->
+                  <button
+                    class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded flex items-center justify-center"
+                    onclick="event.preventDefault();"
+                  >
+                    <i class="fas fa-shopping-cart mr-2"></i> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
